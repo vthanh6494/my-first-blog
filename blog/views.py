@@ -43,3 +43,8 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+
+def post_delete(request,pk):
+   #+some code to check if New belongs to logged in user
+   u = Post.objects.get(pk=pk).delete()
+   return redirect('post_list')

@@ -14,8 +14,8 @@
         <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
         <a href="{% url 'post_delete' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
         {% endif %}
-        <p>{{ post.text|linebreaksbr }}</p>
-        <img src="{{ post.pictures.url}}" alt="{{ post.title }}">
+        <p>{{ post.text|safe }}</p>
+        {% comment %} <img src="{{ post.pictures.url}}" alt="{{ post.title }}"> {% endcomment %}
     </div>
     <hr>
     <a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>

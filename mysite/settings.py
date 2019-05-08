@@ -42,6 +42,26 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
 ]
 
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'height': 400,
+        'toolbar_Custom': [
+            ['Styles', 'Format', 'Font', 'FontSize', 'Bold', 'Italic', 'Underline', 'Strike', 'SpellChecker', 'Undo', 'Redo', 'Subscript', 'Superscript'],
+            [ 'Link', 'Unlink', 'Anchor' ],
+            [ 'Image', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar'], ['Source'],
+            [ 'TextColor', 'BGColor' ]
+        ]
+    }, 
+    'special': {
+        'toolbar': 'Special',
+        'toolbar_Special': [
+            ['Bold', 'CodeSnippet'],
+        ],
+        'extraPlugins': 'codesnippet',
+    }, 
+}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

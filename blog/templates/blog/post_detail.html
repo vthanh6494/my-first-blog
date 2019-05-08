@@ -15,7 +15,9 @@
         <a href="{% url 'post_delete' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
         {% endif %}
         <p>{{ post.text|safe }}</p>
-        {% comment %} <img src="{{ post.pictures.url}}" alt="{{ post.title }}"> {% endcomment %}
+        <div class="extraplugpins">
+            <p>{{ post.text2ss|safe }}</p>
+        </div>
     </div>
     <hr>
     <a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>

@@ -15,7 +15,7 @@
 }
 
 h1, h2, h3, h4 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Arial", Helvetica, sans-serif;
 }
 
 .date {
@@ -63,7 +63,7 @@ img {
     height: auto !important;
 }
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Arial", Helvetica, sans-serif;
     font-size: 14px;
     color: #333;
 }

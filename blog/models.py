@@ -3,6 +3,11 @@ from django.db import models
 from django.utils import timezone
 from ckeditor_uploader.fields import RichTextUploadingField
 
+class Tag(models.Model):
+    name = models.CharField(max_length=32)
+
+    def __str__(self):
+        return self.name
 
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
@@ -14,6 +19,7 @@ class Post(models.Model):
                                           'plugin.js',
                                           )],
                                       )
+    tags = models.ManyToManyField(Tag)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
     pictures = models.ImageField(default='null',upload_to='upload/')
@@ -41,3 +47,5 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.text
+
+

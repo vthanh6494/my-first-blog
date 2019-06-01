@@ -59,7 +59,7 @@ CKEDITOR_CONFIGS = {
     'special': {
         'toolbar': 'Special',
         'toolbar_Special': [
-            ['Bold', 'CodeSnippet', 'Youtube'],
+            ['Bold', 'Image', 'CodeSnippet', 'Youtube'],
         ],
         'extraPlugins': ','.join(['codesnippet', 'youtube']),
     }, 

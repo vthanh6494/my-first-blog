@@ -4,7 +4,7 @@ from django.utils import timezone
 from ckeditor_uploader.fields import RichTextUploadingField
 
 class Tag(models.Model):
-    name = models.CharField(max_length=32)
+    name = models.CharField(max_length=32, unique = True)
 
     def __str__(self):
         return self.name
@@ -19,7 +19,7 @@ class Post(models.Model):
                                           'plugin.js',
                                           )],
                                       )
-    tags = models.ManyToManyField(Tag)
+    tags = models.ManyToManyField('Tag', related_name='posts')
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
     pictures = models.ImageField(default='null',upload_to='upload/')

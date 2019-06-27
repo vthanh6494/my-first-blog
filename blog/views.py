@@ -10,9 +10,9 @@ from django_user_agents.utils import get_user_agent
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date',) #'-' order by DESC
-    user_agent = get_user_agent(request)
-    if user_agent.is_mobile or user_agent.is_tablet:
-        return render(request,'blog/mobile.html', {'posts': posts} )
+    # user_agent = get_user_agent(request)
+    # if user_agent.is_mobile or user_agent.is_tablet:
+    #     return render(request,'blog/mobile.html', {'posts': posts} )
     return render(request, 'blog/post_list.html', {'posts': posts})
 
 def post_detail(request, pk):
@@ -91,3 +91,13 @@ def tag_view(request, name):
     tag = Tag.objects.get(name=name)
     posts = tag.posts.all()
     return render(request, 'blog/post_list.html', {'posts': posts})
+
+def data_view(request):
+    obj = Post.objects.get(id=6)
+    print(obj.text.find('https://i.imgur.com/'))
+    print(type(obj.text2))
+    context = {
+        'title': obj.title,
+        'image': obj.text,
+    }
+    return render(request, 'blog/dataview.html', context)

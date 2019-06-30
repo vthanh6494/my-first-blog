@@ -30,7 +30,6 @@ def post_detail(request, pk):
     obj = Post.objects.get(id=pk)
     imagesLinkStr = obj.text.replace('"', ',')
     imagesLinkList = re.findall(r'https*://i.imgur.com/*\w*\.(?:jpg|gif|png)', imagesLinkStr)
-    print(imagesLinkList)
     if not imagesLinkList:
         image = defaultImgOpenGraph
     else:

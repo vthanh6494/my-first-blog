@@ -28,7 +28,7 @@ def post_detail(request, pk):
     context = {
         'post': post,
         'title': obj.title,
-        'image': random.choice(imagesLinkList),
+        'image': imagesLinkList[0],
         'description': obj.description,
     }
     return render(request, 'blog/post_detail.html', context )

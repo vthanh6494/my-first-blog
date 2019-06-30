@@ -45,7 +45,7 @@ def post_detail(request, pk):
         'image': image,
         'description': description,
     }
-    return render(request, 'blog/post_detail.html', context, {'post': post} )
+    return render(request, 'blog/post_detail.html', {'post': post} )
 
 @login_required
 def post_new(request):

@@ -6,12 +6,11 @@ from django.shortcuts import render, get_object_or_404
 from .forms import PostForm, CommentForm
 from django.contrib.auth.decorators import login_required
 from django_user_agents.utils import get_user_agent
-from django.utils.safestring import SafeData, SafeText, mark_safe
 import re
 import random
 
 defaultImgOpenGraph = "https://i.imgur.com/lioG1lL.jpg"
-defaultDescription = "This is my blog written by Python on Django framework"
+defaultDescription = "This is my blog written by Python and based on Django framework"
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date',) #'-' order by DESC
@@ -31,6 +30,7 @@ def post_detail(request, pk):
     obj = Post.objects.get(id=pk)
     imagesLinkStr = obj.text.replace('"', ',')
     imagesLinkList = re.findall(r'https*://i.imgur.com/*\w*\.(?:jpg|gif|png)', imagesLinkStr)
+    print(imagesLinkList)
     if not imagesLinkList:
         image = defaultImgOpenGraph
     else:
@@ -45,7 +45,7 @@ def post_detail(request, pk):
         'image': image,
         'description': description,
     }
-    return render(request, 'blog/post_detail.html', {'post': post} )
+    return render(request, 'blog/post_detail.html', context)
 
 @login_required
 def post_new(request):
@@ -119,14 +119,3 @@ def tag_view(request, name):
     tag = Tag.objects.get(name=name)
     posts = tag.posts.all()
     return render(request, 'blog/post_list.html', {'posts': posts})
-
-_html_escapes = {
-    ord('&'): '&amp;',
-    ord('<'): '&lt;',
-    ord('>'): '&gt;',
-    ord('"'): '&quot;',
-    ord("'"): '&#39;',
-}
-
-def escape(text):
-    return mark_safe(str(text).translate(_html_escapes))

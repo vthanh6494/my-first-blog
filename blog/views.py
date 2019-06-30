@@ -43,7 +43,7 @@ def post_detail(request, pk):
         'post': post,
         'title': escape(obj.title),
         'image': image,
-        'description': description,
+        'description': escape(description),
     }
     return render(request, 'blog/post_detail.html', context, {'post': post} )
 

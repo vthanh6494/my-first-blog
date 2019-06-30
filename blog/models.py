@@ -12,6 +12,7 @@ class Tag(models.Model):
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
+    description = models.CharField(blank=True, max_length=200)
     text = RichTextUploadingField()
     text2 = RichTextUploadingField(blank=True, null=True, config_name='special',external_plugin_resources=[(
                                           'youtube',

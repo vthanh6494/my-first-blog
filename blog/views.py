@@ -6,18 +6,32 @@ from django.shortcuts import render, get_object_or_404
 from .forms import PostForm, CommentForm
 from django.contrib.auth.decorators import login_required
 from django_user_agents.utils import get_user_agent
-
+import re
+import random
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date',) #'-' order by DESC
+    context = {
+        'posts': posts,
+        'title': "Welcome to my blog" ,
+    }
     # user_agent = get_user_agent(request)
     # if user_agent.is_mobile or user_agent.is_tablet:
     #     return render(request,'blog/mobile.html', {'posts': posts} )
-    return render(request, 'blog/post_list.html', {'posts': posts})
+    return render(request, 'blog/post_list.html', context)
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    return render(request, 'blog/post_detail.html', {'post': post})
+    obj = Post.objects.get(id=pk)
+    imagesLinkStr = obj.text.replace('"', ',')
+    imagesLinkList = re.findall(r'https*://i.imgur.com/*\w*\.(?:jpg|gif|png)', imagesLinkStr)
+    context = {
+        'post': post,
+        'title': obj.title,
+        'image': random.choice(imagesLinkList),
+        'description': obj.description,
+    }
+    return render(request, 'blog/post_detail.html', context )
 
 @login_required
 def post_new(request):
@@ -92,12 +106,3 @@ def tag_view(request, name):
     posts = tag.posts.all()
     return render(request, 'blog/post_list.html', {'posts': posts})
 
-def data_view(request):
-    obj = Post.objects.get(id=6)
-    print(obj.text.find('https://i.imgur.com/'))
-    print(type(obj.text2))
-    context = {
-        'title': obj.title,
-        'image': obj.text,
-    }
-    return render(request, 'blog/dataview.html', context)

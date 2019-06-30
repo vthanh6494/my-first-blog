@@ -1,16 +1,16 @@
 {% load static %}
-<html prefix="og: http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#" >
+<html>
     <head>
         <title>Aln's blog</title>
         <meta charset="UTF-8">
-        {% comment %} <meta http-equiv="content-type" content="text/html;"> {% endcomment %}
+        <meta http-equiv="content-type" content="text/html;">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        {% comment %} <meta property="og:title" content="debug title"/>
+        <meta property="og:title" content="debug title"/>
         <meta property="og:type" content="blog" />
         <meta property="og:site_name" content="Aln's Blog"/>
         <meta property="og:url" content="http://vthanh.pythonanywhere.com/"/>
         <meta property="og:image" content="{{image}}"/>
-        <meta property="og:description" content="{{description}}"/> {% endcomment %}
+        <meta property="og:description" content="{{description}}"/>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">

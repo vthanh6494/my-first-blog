@@ -1,5 +1,5 @@
 {% load static %}
-<html prefix="og: http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+<html prefix="og: http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#" >
     <head>
         <title>Aln's blog</title>
         <meta charset="UTF-8">
@@ -8,8 +8,8 @@
         <meta property="og:type" content="blog" />
         <meta property="og:site_name" content="Aln's Blog"/>
         <meta property="og:url" content="http://vthanh.pythonanywhere.com/"/>
-        <meta property="og:image" content={% if image %}{{image}}{% else %}"https://i.imgur.com/lioG1lL.jpg"{% endif %}/>
-        <meta property="og:description" content="{% if description %}{{description}}{% else %}"This is my blog written by Python on Django framework"{% endif %}"/>
+        <meta property="og:image" content={{image}}/>
+        <meta property="og:description" content="{{description}}"/>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">

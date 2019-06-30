@@ -9,11 +9,16 @@ from django_user_agents.utils import get_user_agent
 import re
 import random
 
+defaultImgOpenGraph = "https://i.imgur.com/lioG1lL.jpg"
+defaultDescription = "This is my blog written by Python on Django framework"
+
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date',) #'-' order by DESC
     context = {
         'posts': posts,
-        'title': "Welcome to my blog" ,
+        'image': defaultImgOpenGraph,
+        'title': "Welcome to Aln's blog",
+        'description': defaultDescription,
     }
     # user_agent = get_user_agent(request)
     # if user_agent.is_mobile or user_agent.is_tablet:
@@ -25,13 +30,21 @@ def post_detail(request, pk):
     obj = Post.objects.get(id=pk)
     imagesLinkStr = obj.text.replace('"', ',')
     imagesLinkList = re.findall(r'https*://i.imgur.com/*\w*\.(?:jpg|gif|png)', imagesLinkStr)
+    if not imagesLinkList:
+        image = defaultImgOpenGraph
+    else:
+        image = imagesLinkList[0]
+    if not obj.description:
+        description = defaultDescription
+    else:
+        description = obj.description
     context = {
         'post': post,
         'title': obj.title,
-        'image': imagesLinkList[0],
-        'description': obj.description,
+        'image': image,
+        'description': description,
     }
-    return render(request, 'blog/post_detail.html', context )
+    return render(request, 'blog/post_detail.html', context, {'post': post} )
 
 @login_required
 def post_new(request):
@@ -105,4 +118,3 @@ def tag_view(request, name):
     tag = Tag.objects.get(name=name)
     posts = tag.posts.all()
     return render(request, 'blog/post_list.html', {'posts': posts})
-

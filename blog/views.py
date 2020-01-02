@@ -17,7 +17,7 @@ def post_list(request):
     context = {
         'posts': posts,
         'image': defaultImgOpenGraph,
-        'title': "Welcome to Aln's blog",
+        'title': "Welcome to Anhcun blog",
         'description': defaultDescription,
     }
     # user_agent = get_user_agent(request)

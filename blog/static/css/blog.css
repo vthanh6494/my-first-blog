@@ -1,12 +1,53 @@
-.page-header {
-    background-color: #C25100;
-    margin-top: 0;
-    padding: 20px 20px 20px 40px;
+.right-header {
+    position: fixed;
+    display: block;
+    background: #f5f6fa;
+    width: 300px;
+    height: 100%;
+    padding: 50px 10px;
+    text-align: right;
 }
 
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
-    font-size: 36pt;
+.right-header h4 {
+    font-size: 14px;
+    color: #777;
+    font-weight: 700;
+    max-width: 450px;
+    margin: 0 auto;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.right-header .header-top {
+    padding: 30px 10px;
+    text-align: right;
+}
+
+.right-header .header-top a {
+    display: block;
+    margin: 8px 0;
+    clear: both;
+    font-size: 16px;
+}
+
+.right-header .header-top:before {
+    content: " ";
+    display: block;
+    width: 80px;
+    height: 5px;
+    background: #666;
+    float: right;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #555;
+}
+
+a:hover {
+    color: #d25801;
     text-decoration: none;
 }
 
@@ -14,8 +55,20 @@
     margin: 0px auto;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h4 {
     font-family: "Arial", Helvetica, sans-serif;
+}
+
+h3 {
+    font-size: 14px;
+    line-height: 26px;
+    color: #6e6e6e;
+    font-weight: 300;
+    max-width: 450px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .date {
@@ -35,10 +88,6 @@ h1, h2, h3, h4 {
     float: right;
     font-size: 26pt;
     margin-right: 20px;
-}
-
-.post {
-    margin-bottom: 50px;
 }
 
 .post h2 a, .post h2 a:visited {
@@ -72,13 +121,11 @@ body {
     height: auto;
     padding: 20px;
     word-wrap: break-word;
+    margin-left: 300px;
 }
-
 .post p {
-    line-height: 145%;
     font-weight: 300;
     text-align: justify;
-    margin: 24px 0;
 }
 
 .post-attribute{
@@ -94,4 +141,40 @@ body {
     font-size: 10pt;
     font-weight: 700;
     margin-right: 5px;
+}
+
+@media screen and (max-width: 760px) {
+    .container {
+        margin-left: 0px;
+    }
+    .right-header {
+        height: auto;
+        width: 100%;
+        position: relative;
+        text-align: center;
+    }
+
+    .right-header .header-top {
+        padding: 15px 10px;
+        text-align: center;
+    }
+
+    .right-header .header-top:before {
+        content: " ";
+        display: block;
+        width: 130px;
+        height: 2px;
+        background: #666;
+        margin: 0 auto 20px;
+        float: none;
+    }
+
+    .right-header .header-top a {
+        display: inline;
+        margin-right: 10px;
+        clear: both;
+        font-size: 16px;
+    }
+
+    
 }

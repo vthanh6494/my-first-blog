@@ -22,7 +22,7 @@
         <script>hljs.initHighlightingOnLoad();</script>
     </head>
     <body>
-    <div class="page-header">
+    <header class="right-header">
         <!-- {% if user.is_authenticated %}
             <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
             <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
@@ -30,9 +30,18 @@
         {% else %}
             <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
         {% endif %} -->
-        <h1><p>Anhcun blog</p></h1>
-        <h1><a href="/">Bài viết</a></h1>
-    </div>
+        <figure id="user_logo" class="active">
+            <a href="/"></a>
+        </figure>
+        <h2><a href="/">Anhcun blog</a></h2>
+        <h4><span class="name-head">by vthanh</span></h4>
+        <h3>random blog nên gì cũng viết</h3>
+        <div class="header-top">
+            <a href="https://www.facebook.com/akiko.vo94" class="fb">Facebook</a>
+            <a href="https://www.instagram.com/honganhftu01677/" class="instag">Instagram</a>
+            <a href="https://github.com/vthanh6494?tab=repositories">Github</a>
+        </div>
+    </header>
     <div class="content container">
         <div class="wrapping">
         {% block content %}

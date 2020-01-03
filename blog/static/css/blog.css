@@ -44,6 +44,7 @@
 
 a {
     color: #555;
+    text-decoration: none;
 }
 
 a:hover {
@@ -60,7 +61,7 @@ h1, h2, h4 {
 }
 
 h3 {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 26px;
     color: #6e6e6e;
     font-weight: 300;
@@ -69,6 +70,7 @@ h3 {
     margin-top: 15px;
     padding-left: 10px;
     padding-right: 10px;
+    font-family: monospace;
 }
 
 .date {
@@ -115,13 +117,14 @@ body {
     font-family: "Arial", Helvetica, sans-serif;
     font-size: 14px;
     color: #333;
+    margin: 0;
 }
 .container {
     max-width: 700px;
     height: auto;
     padding: 20px;
     word-wrap: break-word;
-    margin-left: 300px;
+    margin-left: 320px;
 }
 .post p {
     font-weight: 300;

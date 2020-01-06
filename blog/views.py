@@ -120,4 +120,10 @@ def tag_view(request, name):
     return render(request, 'blog/post_list.html', {'posts': posts})
 
 def resume_view(request):
-    return render(request, 'blog/resume.html')
+    image = "https://i.imgur.com/lioG1lL.jpg"
+    description = "This is Hong Anh's resume"
+    context = {
+        'image': image,
+        'description': description
+    }
+    return render(request, 'blog/resume.html', context)

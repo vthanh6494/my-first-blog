@@ -20,6 +20,27 @@
     padding-right: 10px;
 }
 
+figure#user_logo {
+    width: 110px;
+    height: 110px;
+    display: block;
+    background-color: transparent;
+    border: 5px solid #000;
+    border-radius: 100%;
+    margin: 0 0 10px auto;
+}
+
+figure#user_logo a img{
+    display: block;
+    width: 95px;
+    height: 95px;
+    border-radius: 100%;
+    margin: 0 auto;
+    text-indent: -9999px;
+    margin-top: 2px;
+    background-size: 100%;
+}
+
 .right-header .header-top {
     padding: 30px 10px;
     text-align: right;
@@ -147,6 +168,9 @@ body {
 }
 
 @media screen and (max-width: 760px) {
+    figure#user_logo {
+        margin: 0 auto;
+    }
     .container {
         margin-left: 0px;
     }

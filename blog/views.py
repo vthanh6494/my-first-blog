@@ -116,5 +116,8 @@ def comment_remove(request, pk):
 
 def tag_view(request, name):
     tag = Tag.objects.get(name=name)
-    posts = tag.posts.all()
+    posts = tag.posts.filter(published_date__lte=timezone.now()).order_by('-published_date',)
     return render(request, 'blog/post_list.html', {'posts': posts})
+
+def resume_view(request):
+    return render(request, 'blog/resume.html')

@@ -14,6 +14,10 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        {% load staticfiles %}
+        {% block style %}
+            <link rel="stylesheet" type="text/css" href="{% static "fontawesome/css/all.min.css" %}" />
+        {% endblock %}
         <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
         <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon_corgi.ico' %}" />
         <!-- highlight đoạn code -->
@@ -36,11 +40,26 @@
         <h2><a href="/">Anhcun blog</a></h2>
         <h4><span class="name-head">by vthanh</span></h4>
         <h3>random blog nên gì cũng viết</h3>
-        <div class="header-top">
+        <div class="header-top show-pc">
             <a href="{% url 'resume_view'%}" class="resume">Resume</a>
             <a href="https://www.facebook.com/akiko.vo94" class="fb">Facebook</a>
             <a href="https://www.instagram.com/honganhftu01677/" class="instag">Instagram</a>
             <a href="https://github.com/vthanh6494?tab=repositories">Github</a>
+        </div>
+        <div class="header-top show-sp">
+            <div class="social-icons">
+                <a class="cv-icon" href="{% url 'resume_view'%}"><img src="{% static 'images/cv-icon.png' %}" alt="icon-CV"></img>
+                </a>
+                <a href="https://www.facebook.com/akiko.vo94">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/honganhftu01677/">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://github.com/vthanh6494?tab=repositories">
+                    <i class="fab fa-github"></i>
+                </a>
+              </div>
         </div>
     </header>
     <div class="content container">

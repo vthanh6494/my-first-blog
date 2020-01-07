@@ -172,9 +172,16 @@ body {
     margin: 10px 0;
     font-size: 16px;
     line-height: 26px;
-    color: #6e6e6e;
+    color: #505050;
     font-weight: 300;
-    font-family: monospace;
+}
+
+.show-pc {
+    display: block;
+}
+
+.show-sp {
+    display: none;
 }
 
 @media screen and (max-width: 760px) {
@@ -189,6 +196,7 @@ body {
         width: 100%;
         position: relative;
         text-align: center;
+        padding: 25px 10px 0px;
     }
 
     .right-header .header-top {
@@ -210,8 +218,19 @@ body {
         display: inline;
         margin-right: 10px;
         clear: both;
-        font-size: 16px;
+        font-size: 35px;
     }
 
-    
+    .show-pc {
+        display: none;
+    }
+
+    .show-sp {
+        display: inline;
+    }
+
+    .social-icons .cv-icon img {
+        width: 25px;
+        margin-top: -9px;
+    }
 }

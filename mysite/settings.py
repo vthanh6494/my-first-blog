@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'debug_toolbar',
     'django_user_agents',
+    'django_static_fontawesome',
 ]
 
 CACHES = {

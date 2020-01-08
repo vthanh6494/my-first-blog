@@ -11,12 +11,14 @@
             {% endif %}
         </div>
         <div class="post-attribute">
-            <div class="publish-date">
-                {{ post.published_date }}
-            </div>
-            <div class="show-comment">
-                <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
-                <!-- <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.comments.count }}</a> -->
+            <div class="date-and-comment">
+                <div class="publish-date">
+                    {{ post.published_date }}
+                </div>
+                <div class="show-comment">
+                    <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
+                    <!-- <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.comments.count }}</a> -->
+                </div>
             </div>
             <div class="tags">
                 {% if post.tags.count > 0 %}

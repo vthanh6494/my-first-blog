@@ -53,14 +53,14 @@ figure#user_logo a img{
     font-size: 16px;
 }
 
-.right-header .header-top:before {
+.wrap-head:after {
     content: " ";
     display: block;
     width: 80px;
     height: 5px;
     background: #666;
     float: right;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 a {
@@ -185,6 +185,8 @@ body {
     display: none;
 }
 
+
+
 @media screen and (max-width: 760px) {
     figure#user_logo {
         margin: 0 auto;
@@ -205,13 +207,13 @@ body {
         text-align: center;
     }
 
-    .right-header .header-top:before {
+    .wrap-head:after {
         content: " ";
         display: block;
         width: 130px;
         height: 2px;
         background: #666;
-        margin: 0 auto 20px;
+        margin: 20px auto 0px;
         float: none;
     }
 
@@ -233,5 +235,28 @@ body {
     .social-icons .cv-icon img {
         width: 25px;
         margin-top: -9px;
+    }
+
+    .social-icons.fixed-icons-bar {
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        z-index: 9999;
+        background: #f5f6fa;
+        padding: 5px 10px;
+        text-align: right;
+    }
+
+    .social-icons.fixed-icons-bar a {
+        font-size: 20px;
+    }
+
+    .social-icons.fixed-icons-bar a img{
+        width: 16px;
+        margin-top: -5px;
+    }
+
+    .plus-margin-top {
+        margin-top: 30px;
     }
 }

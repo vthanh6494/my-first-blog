@@ -1,5 +1,4 @@
 (function($) {
-    console.log('ohhh 1')
     "use strict"; // Start of use strict
   
     // Smooth scrolling using jQuery easing
@@ -19,7 +18,6 @@
     // Closes responsive menu when a scroll trigger link is clicked
     $('.js-scroll-trigger').click(function() {
       $('.navbar-collapse').collapse('hide');
-      console.log('blabla');
     });
   
     // Activate scrollspy to add active class to navbar items on scroll

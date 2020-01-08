@@ -23,9 +23,10 @@
   <link href="{% static 'css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
 
   <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
   <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
-  <link rel="stylesheet" href="{% static 'css/resume.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/resume.css' %}">
 
 </head>
 
@@ -33,7 +34,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="/">
-      <span class="d-block d-lg-none">VO THI HONG ANH</span>
+      <span class="d-block d-lg-none">HONG ANH's CV</span>
       <span class="d-none d-lg-block">
         <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'images/python-logo.png' %}" alt="avatar img">
       </span>
@@ -47,10 +48,10 @@
           <a class="nav-link js-scroll-trigger" href="#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
@@ -59,7 +60,7 @@
           <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
+          <a class="nav-link js-scroll-trigger" href="#languages">Languages</a>
         </li>
       </ul>
     </div>
@@ -75,7 +76,9 @@
         <div class="subheading mb-5">No 38 19B Street · Binh An ward, District 2 · (+84) 377-532-248·
           <a href="mailto:honganh6034@gmail.com">honganh6034@gmail.com</a>
         </div>
-        <p class="lead mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+        <p class="lead mb-5">An alumni of Foreign Trade University, major in External Economics, having 2.5 years’ experiences as export document staff at a trading company, strong desire to challenge myself on many fields to improve my abilities and learn new things. <br>
+        I realized how I love algorithm when I had the chance to approach it about 3 years ago. It always has new things to learn and new problem to solve. Currently, a position connecting me with Information Technology and Database, improving my skill would suit me the best.
+        </p>
         <div class="social-icons">
           <!-- <a href="#">
             <i class="fab fa-linkedin-in"></i>
@@ -95,88 +98,104 @@
 
     <hr class="m-0">
 
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
+      <div class="w-100">
+        <h2 class="mb-5">Education</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <h3 class="mb-0">Rails on girls meet up</h3>
+            <div class="subheading mb-3">Meet up about ruby on rails which is hold by TINYpulse Vietnam and participants are girls </div>
+            <p>Demo project with ruby on rals</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">July, 20th 2019</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <h3 class="mb-0">Blue course - Python (Big O coding)</h3>
+            <div class="subheading mb-3">Algorithm & data structure (medium level)</div>
+            <p>Certificate</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">October 2018 - December 2018</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <h3 class="mb-0">Green course - Python (Big O coding)</h3>
+            <div class="subheading mb-3">Algorithm & data structure (basic level)</div>
+            <p>Certificate</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">September 2018 - November 2018</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Foreign Trade University</h3>
+            <div class="subheading mb-3">Bachelor of Economics</div>
+            <div>External</div>
+            <p>GPA: 3.12/4</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">September 2012 - March 2016</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="m-0">
+
     <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
       <div class="w-100">
         <h2 class="mb-5">Experience</h2>
 
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
-            <h3 class="mb-0">Senior Web Developer</h3>
-            <div class="subheading mb-3">Intelitec Solutions</div>
-            <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+            <h3 class="mb-0">PHP Web Developer (fresher)</h3>
+            <div class="subheading mb-3">ICD Viet Nam</div>
+            <div class="title mb-1">Laravel Project</div>
+            <ul class="fa-ul mb-0">
+              <li><i class="fa-li fa fa-check"></i>migration from Cake php website to Laravel framework.
+              <li><i class="fa-li fa fa-check"></i> Calling API and show information on the web
+              <li><i class="fa-li fa fa-check"></i>Maintenance available web: https://petlife.asia/
+              <li><i class="fa-li fa fa-check"></i>Doing some frontend tasks from Japan
+            </ul>
+            <div class="title mb-1">Silex Project</div>
+            <ul class="fa-ul mb-0">
+              <li><i class="fa-li fa fa-check"></i>Check logic and rewrite workflow.
+            </ul>
           </div>
           <div class="resume-date text-md-right">
-            <span class="text-primary">March 2013 - Present</span>
+            <span class="text-primary">March 2019 - Present</span>
           </div>
         </div>
 
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
-            <h3 class="mb-0">Web Developer</h3>
-            <div class="subheading mb-3">Intelitec Solutions</div>
-            <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
-          </div>
+            <h3 class="mb-0">Export - import document staff</h3>
+            <div class="subheading mb-3">Huy and Brothers</div>
+            <div class="title mb-1">Duties and Responsibilities:</div>
+            <ul class="fa-ul mb-0">
+              <li><i class="fa-li fa fa-check"></i>Sale Admin
+              <li><i class="fa-li fa fa-check"></i>International payment
+              <li><i class="fa-li fa fa-check"></i>Export documents preparing
+              <li><i class="fa-li fa fa-check"></i>Communicate between supplier and customer
+              <li><i class="fa-li fa fa-check"></i>Arrange shipment schedule
+            </ul>
+            </div>
           <div class="resume-date text-md-right">
-            <span class="text-primary">December 2011 - March 2013</span>
+            <span class="text-primary">May 2016 - February 2019</span>
           </div>
         </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Junior Web Designer</h3>
-            <div class="subheading mb-3">Shout! Media Productions</div>
-            <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">July 2010 - December 2011</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-          <div class="resume-content">
-            <h3 class="mb-0">Web Design Intern</h3>
-            <div class="subheading mb-3">Shout! Media Productions</div>
-            <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">September 2008 - June 2010</span>
-          </div>
-        </div>
-
       </div>
 
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
-      <div class="w-100">
-        <h2 class="mb-5">Education</h2>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">University of Colorado Boulder</h3>
-            <div class="subheading mb-3">Bachelor of Science</div>
-            <div>Computer Science - Web Development Track</div>
-            <p>GPA: 3.23</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">August 2006 - May 2010</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-          <div class="resume-content">
-            <h3 class="mb-0">James Buchanan High School</h3>
-            <div class="subheading mb-3">Technology Magnet Program</div>
-            <p>GPA: 3.56</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">August 2002 - May 2006</span>
-          </div>
-        </div>
-
-      </div>
     </section>
 
     <hr class="m-0">
@@ -184,26 +203,38 @@
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
       <div class="w-100">
         <h2 class="mb-5">Skills</h2>
-
         <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+        <div class="title mb-1">Many experience</div>
         <ul class="list-inline dev-icons">
           <li class="list-inline-item">
-            <i class="fab fa-html5"></i>
+            <i class="fab fa-php"></i>
           </li>
           <li class="list-inline-item">
-            <i class="fab fa-css3-alt"></i>
+            <i class="devicon-python-plain-wordmark"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-github-plain"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-git-plain"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-apache-plain-wordmark"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-windows8-original"></i>
+          </li>
+        </ul>
+        <div class="title mb-1">Having knowledge</div>
+        <ul class="list-inline dev-icons">
+          <li class="list-inline-item">
+            <i class="devicon-html5-plain-wordmark"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-css3-plain-wordmark"></i>
           </li>
           <li class="list-inline-item">
             <i class="fab fa-js-square"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-angular"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-react"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-node-js"></i>
           </li>
           <li class="list-inline-item">
             <i class="fab fa-sass"></i>
@@ -212,33 +243,32 @@
             <i class="fab fa-less"></i>
           </li>
           <li class="list-inline-item">
-            <i class="fab fa-wordpress"></i>
-          </li>
-          <li class="list-inline-item">
             <i class="fab fa-gulp"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-grunt"></i>
           </li>
           <li class="list-inline-item">
             <i class="fab fa-npm"></i>
           </li>
+          <li class="list-inline-item">
+            <i class="fab fa-pip"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-bootstrap-plain-wordmark"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-mysql-plain"></i>
+          </li>
         </ul>
-
-        <div class="subheading mb-3">Workflow</div>
-        <ul class="fa-ul mb-0">
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Mobile-First, Responsive Design</li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Cross Browser Testing &amp; Debugging</li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Cross Functional Teams</li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Agile Development &amp; Scrum</li>
+        <div class="subheading mb-3">Frameworks</div>
+        <ul class="list-inline dev-icons">
+          <li class="list-inline-item">
+            <i class="fab fa-laravel"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-django-plain"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-wordpress"></i>
+          </li>
         </ul>
       </div>
     </section>
@@ -248,46 +278,24 @@
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
       <div class="w-100">
         <h2 class="mb-5">Interests</h2>
-        <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-        <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
+        <p>Apart from being a web developer, I love learning something new around my life. That is the reason why I love coding and traveling. Thanks to coding, I can figure out how a web can do this action, redirect to another link, where the form goes when hitting the submit button..etc by my self. Traveling help me discover the culture, Languages and landscape around the world. Then I realized that how amazing the nature is!</p>
+        <p class="mb-0">When forced indoors, I follow fantasy genre movies and television shows, I spend a large amount of my free time exploring the latest technology advancements and practice algorithm that help my improve logical thinking.</p>
       </div>
     </section>
 
     <hr class="m-0">
 
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="awards">
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="languages">
       <div class="w-100">
-        <h2 class="mb-5">Awards &amp; Certifications</h2>
+        <h2 class="mb-5">Languages</h2>
         <ul class="fa-ul mb-0">
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Google Analytics Certified Developer</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Mobile Web Specialist - Google Certification</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            1<sup>st</sup>
-            Place - University of Colorado Boulder - Emerging Tech Competition 2009</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            1<sup>st</sup>
-            Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            2<sup>nd</sup>
-            Place - University of Colorado Boulder - Emerging Tech Competition 2008</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            1<sup>st</sup>
-            Place - James Buchanan High School - Hackathon 2006</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            3<sup>rd</sup>
-            Place - James Buchanan High School - Hackathon 2005</li>
+          <li><i class="fa-li fa fa-check"></i>Japanese: N3 - keeping learning
+          <li><i class="fa-li fa fa-check"></i>English: Fluent in speaking, reading
         </ul>
       </div>
     </section>
+
+    <hr class="m-0">
 
   </div>
 
@@ -297,7 +305,6 @@
 
   <!-- Plugin JavaScript -->
   <script src="{% static 'js/jquery-easing.js' %}"></script>
-  "></script>
 
   <!-- Custom scripts for this template -->
   <script src="{% static 'js/resume.js' %}"></script>

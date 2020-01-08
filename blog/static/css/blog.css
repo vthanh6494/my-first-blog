@@ -132,8 +132,8 @@ h2{
 }
 
 img {
-    max-width: 100% !important;
-    height: auto !important;
+    max-width: 100%;
+    height: auto;
 }
 body {
     font-family: "Arial", Helvetica, sans-serif;
@@ -204,6 +204,7 @@ body {
 
     .right-header .header-top {
         text-align: center;
+        padding: 10px
     }
 
     .wrap-head:after {
@@ -236,7 +237,7 @@ body {
         margin-top: -9px;
     }
 
-    .social-icons.fixed-icons-bar {
+    /* .social-icons.fixed-icons-bar {
         width: 100%;
         position: fixed;
         top: 0px;
@@ -244,18 +245,66 @@ body {
         background: #f5f6fa;
         padding: 5px 10px;
         text-align: right;
-    }
+    } */
 
-    .social-icons.fixed-icons-bar a {
+    /* .social-icons.fixed-icons-bar a {
         font-size: 20px;
-    }
+    } */
 
-    .social-icons.fixed-icons-bar a img{
+    /* .social-icons.fixed-icons-bar a img{
         width: 16px;
         margin-top: -5px;
-    }
+    } */
 
     .plus-margin-top {
         margin-top: 30px;
+    }
+
+    .fixed-icons-bar {
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        z-index: 9999;
+        background: #f5f6fa;
+        left: 0;
+        display: flex;
+    }
+
+
+    .fixed-icons-bar .wrap-logo {
+        display: flex;
+    }
+    .fixed-icons-bar .wrap-logo a {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 100%;
+    margin: 0 0 10px auto;
+    }
+    .fixed-icons-bar .wrap-logo img {
+        display: block;
+        width: 33px;
+        height: 34px;
+        border-radius: 100%;
+        text-indent: -9999px;
+        margin-top: 2px;
+        margin-left: 2px;
+        background-size: 100%;
+    }
+
+    .fixed-icons-bar .wrap-logo p {
+        padding-left: 10px;
+    }
+
+    .fixed-icons-bar .social-icons {
+        text-align: right;
+    }
+    .fixed-icons-bar .social-icons a{
+        font-size: 30px;
+    }
+    .fixed-icons-bar .social-icons a img{
+        width: 23px;
+        margin-top: -7px;
     }
 }

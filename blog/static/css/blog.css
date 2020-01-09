@@ -42,7 +42,7 @@ figure#user_logo a img{
 }
 
 .right-header .header-top {
-    padding: 30px 10px;
+    padding: 35px 10px;
     text-align: right;
 }
 
@@ -154,11 +154,16 @@ body {
 }
 
 .post-attribute{
+    display: block;
+}
+
+.date-and-comment{
     display: inline-flex;
+    width: 100%;
 }
 
 .publish-date, .show-comment {
-    margin-right: 10px;
+    width: 50%;
 }
 
 .tags a{
@@ -199,12 +204,12 @@ body {
         width: 100%;
         position: relative;
         text-align: center;
-        padding: 25px 10px 0px;
+        padding: 25px 10px 15px;
     }
 
     .right-header .header-top {
         text-align: center;
-        padding: 10px
+        padding: 10px 10px 0;
     }
 
     .wrap-head:after {
@@ -215,13 +220,17 @@ body {
         background: #666;
         margin: 20px auto 0px;
         float: none;
-    }
+    }    
 
     .right-header .header-top a {
-        display: inline;
-        margin-right: 10px;
+        margin-right: 25px;
         clear: both;
         font-size: 35px;
+        margin-top: 20px;
+    }
+
+    .right-header .header-top a:last-child {
+        margin-right: 0px;
     }
 
     .show-pc {
@@ -232,32 +241,19 @@ body {
         display: inline;
     }
 
-    .social-icons .cv-icon img {
-        width: 25px;
-        margin-top: -9px;
+
+    .social-icons {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    /* .social-icons.fixed-icons-bar {
-        width: 100%;
-        position: fixed;
-        top: 0px;
-        z-index: 9999;
-        background: #f5f6fa;
-        padding: 5px 10px;
-        text-align: right;
-    } */
-
-    /* .social-icons.fixed-icons-bar a {
-        font-size: 20px;
-    } */
-
-    /* .social-icons.fixed-icons-bar a img{
-        width: 16px;
-        margin-top: -5px;
-    } */
+    .social-icons .cv-icon img {
+        width: 25px;
+    }
 
     .plus-margin-top {
-        margin-top: 30px;
+        margin-top: 57px;
     }
 
     .fixed-icons-bar {
@@ -268,11 +264,14 @@ body {
         background: #f5f6fa;
         left: 0;
         display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
 
     .fixed-icons-bar .wrap-logo {
         display: flex;
+        align-items: center;
     }
     .fixed-icons-bar .wrap-logo a {
     width: 40px;
@@ -297,14 +296,13 @@ body {
         padding-left: 10px;
     }
 
-    .fixed-icons-bar .social-icons {
-        text-align: right;
-    }
     .fixed-icons-bar .social-icons a{
         font-size: 30px;
+        margin-top: 0px;
+        margin-right: 10px;
+
     }
     .fixed-icons-bar .social-icons a img{
         width: 23px;
-        margin-top: -7px;
     }
 }

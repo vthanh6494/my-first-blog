@@ -33,12 +33,15 @@
 <body id="page-top">
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="/">
+    <div class="wrap-icon-blog d-block d-lg-none">
+      <a href="/"><i class="fas fa-blog"></i></img></a>
+    </div>
+    <div class="navbar-brand js-scroll-trigger no-margin">
       <span class="d-block d-lg-none">HONG ANH's CV</span>
       <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'images/python-logo.png' %}" alt="avatar img">
+        <a href="/"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'images/python-logo.png' %}" alt="avatar img"></a>
       </span>
-    </a>
+    </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

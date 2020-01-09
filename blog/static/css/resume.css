@@ -183,9 +183,31 @@ a:hover, a:focus, a:active {
       padding-top: 7rem !important;
       padding-bottom: 7rem !important;
     }
+
+  .wrap-icon-blog img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .no-margin {
+    margin-right: 0;
+  }
 }
 
 .title {
   font-size: 20px;
   margin-top: 15px;
+}
+
+.wrap-icon-blog a {
+  font-size: 30px;
+  
+}
+
+.wrap-icon-blog .fa-blog {
+  color: rgba(255,255,255,.5);
+  border: 1px solid;
+  border-color: rgba(255,255,255,.1);
+  padding: 10px;
+  border-radius: 100%;
 }

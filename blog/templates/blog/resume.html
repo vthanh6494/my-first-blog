@@ -17,7 +17,7 @@
   <!-- loading fontawesome -->
   {% load staticfiles %}
   {% block style %}
-      <link rel="stylesheet" type="text/css" href="{% static "fontawesome/css/all.min.css" %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'fontawesome/css/all.min.css' %}" />
   {% endblock %}
   <!-- Bootstrap core CSS -->
   <link href="{% static 'css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
@@ -33,12 +33,15 @@
 <body id="page-top">
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="/">
+    <div class="wrap-icon-blog d-block d-lg-none">
+      <a href="/"><i class="fas fa-blog"></i></img></a>
+    </div>
+    <div class="navbar-brand js-scroll-trigger no-margin">
       <span class="d-block d-lg-none">HONG ANH's CV</span>
       <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'images/python-logo.png' %}" alt="avatar img">
+        <a href="/"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'images/python-logo.png' %}" alt="avatar img"></a>
       </span>
-    </a>
+    </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -222,25 +225,19 @@
             <i class="devicon-apache-plain-wordmark"></i>
           </li>
           <li class="list-inline-item">
-            <i class="devicon-windows8-original"></i>
-          </li>
-        </ul>
-        <div class="title mb-1">Having knowledge</div>
-        <ul class="list-inline dev-icons">
-          <li class="list-inline-item">
             <i class="devicon-html5-plain-wordmark"></i>
           </li>
           <li class="list-inline-item">
             <i class="devicon-css3-plain-wordmark"></i>
           </li>
+        </ul>
+        <div class="title mb-1">Having knowledge</div>
+        <ul class="list-inline dev-icons">
           <li class="list-inline-item">
             <i class="fab fa-js-square"></i>
           </li>
           <li class="list-inline-item">
             <i class="fab fa-sass"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-less"></i>
           </li>
           <li class="list-inline-item">
             <i class="fab fa-gulp"></i>
@@ -256,6 +253,9 @@
           </li>
           <li class="list-inline-item">
             <i class="devicon-mysql-plain"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-docker-plain-wordmark"></i>
           </li>
         </ul>
         <div class="subheading mb-3">Frameworks</div>
@@ -279,7 +279,7 @@
       <div class="w-100">
         <h2 class="mb-5">Interests</h2>
         <p>Apart from being a web developer, I love learning something new around my life. That is the reason why I love coding and traveling. Thanks to coding, I can figure out how a web can do this action, redirect to another link, where the form goes when hitting the submit button..etc by my self. Traveling help me discover the culture, Languages and landscape around the world. Then I realized that how amazing the nature is!</p>
-        <p class="mb-0">When forced indoors, I follow fantasy genre movies and television shows, I spend a large amount of my free time exploring the latest technology advancements and practice algorithm that help my improve logical thinking.</p>
+        <p class="mb-0">When forced indoors, I follow fantasy genre movies and television shows, I spend a large amount of my free time exploring the latest technology advancements and practicing algorithm that helps me improve logical thinking.</p>
       </div>
     </section>
 

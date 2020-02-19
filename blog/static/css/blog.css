@@ -42,7 +42,7 @@ figure#user_logo a img{
 }
 
 .right-header .header-top {
-    padding: 30px 10px;
+    padding: 35px 10px;
     text-align: right;
 }
 
@@ -142,21 +142,24 @@ body {
     margin: 0;
 }
 .container {
-    max-width: 700px;
+    max-width: 650px;
     height: auto;
     padding: 20px;
     word-wrap: break-word;
-    margin-left: 320px;
+    margin-left: 295px;
 }
 .post p {
     font-weight: 300;
     text-align: justify;
 }
 
+.post-attribute{
+    display: block;
+}
+
 .date-and-comment{
     display: inline-flex;
     width: 100%;
-    justify-content: space-between;
 }
 
 .publish-date, .show-comment {
@@ -201,12 +204,12 @@ body {
         width: 100%;
         position: relative;
         text-align: center;
-        padding: 25px 10px 0px;
+        padding: 25px 10px 15px;
     }
 
     .right-header .header-top {
         text-align: center;
-        padding: 0 10px
+        padding: 10px 10px 0;
     }
 
     .wrap-head:after {
@@ -217,13 +220,17 @@ body {
         background: #666;
         margin: 20px auto 0px;
         float: none;
-    }
+    }    
 
     .right-header .header-top a {
-        display: inline;
         margin-right: 25px;
         clear: both;
         font-size: 35px;
+        margin-top: 20px;
+    }
+
+    .right-header .header-top a:last-child {
+        margin-right: 0px;
     }
 
     .right-header .header-top a:last-child {
@@ -238,8 +245,9 @@ body {
         display: inline;
     }
 
+
     .social-icons {
-        display: flex;
+        display: inline-flex;
         justify-content: center;
         align-items: center;
     }
@@ -249,7 +257,7 @@ body {
     }
 
     .plus-margin-top {
-        margin-top: 30px;
+        margin-top: 57px;
     }
 
     .fixed-icons-bar {
@@ -293,12 +301,11 @@ body {
         padding-left: 10px;
     }
 
-    .fixed-icons-bar .social-icons {
-        text-align: right;
-    }
     .fixed-icons-bar .social-icons a{
         font-size: 30px;
+        margin-top: 0px;
         margin-right: 10px;
+
     }
     .fixed-icons-bar .social-icons a img{
         width: 23px;
